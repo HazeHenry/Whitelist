@@ -1,8 +1,0 @@
-name: Whitelist
-version: '1.0'
-main: me.hazehenry.whitelist.WhitelistPlugin
-api-version: '1.18'
-commands:
-  wl:
-    aliases:
-      - whitelist
