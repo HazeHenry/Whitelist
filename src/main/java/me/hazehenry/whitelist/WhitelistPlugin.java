@@ -1,6 +1,7 @@
 package me.hazehenry.whitelist;
 
 import me.hazehenry.whitelist.command.WhitelistCommand;
+import me.hazehenry.whitelist.command.WhitelistTabCompleter;
 import me.hazehenry.whitelist.listener.WhitelistListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -18,10 +19,10 @@ public final class WhitelistPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
         Bukkit.getPluginManager().registerEvents(new WhitelistListener(),this);
 
         getCommand("whitelist").setExecutor(new WhitelistCommand());
+        getCommand("whitelist").setTabCompleter(new WhitelistTabCompleter());
 
         instance = this;
 

@@ -27,6 +27,7 @@ public class WhitelistListener implements Listener {
                     break;
                 }
             }
+
             if (!canJoin) {
                 e.setLoginResult(AsyncPlayerPreLoginEvent.Result.KICK_WHITELIST);
                 e.setKickMessage(ChatColor.translateAlternateColorCodes('&',WhitelistPlugin.getInstance().getConfig().getString("whitelist-message")));

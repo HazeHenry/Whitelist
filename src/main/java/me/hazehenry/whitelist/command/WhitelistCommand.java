@@ -109,6 +109,7 @@ public class WhitelistCommand implements CommandExecutor {
                     break;
                 }
             }
+
             if (isWhitelisted) {
                 sender.sendMessage(prefix + "§cEz a játékos már whitelistelve van!");
                 return false;
@@ -164,6 +165,7 @@ public class WhitelistCommand implements CommandExecutor {
         } else {
             p.sendMessage("§c§lWHITELIST §f§lPLUGIN §8- §cInaktív");
         }
+        p.sendMessage("");
         p.sendMessage(" §7Parancsok:");
         p.sendMessage("  §c/wl <on/off> §8- §fFehérlista ki/be kapcsolása");
         p.sendMessage("  §c/wl <add/remove> §8- §fJátékosok hozzáadása / eltávolítása.");
